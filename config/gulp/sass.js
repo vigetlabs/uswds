@@ -11,6 +11,7 @@ var filter = require('gulp-filter');
 var replace = require('gulp-replace');
 var runSequence = require('run-sequence');
 var del = require('del');
+var globImporter = require('sass-glob-importer');
 var task = 'sass';
 
 var entryFileFilter = filter('uswds.scss', { restore: true });
@@ -64,7 +65,10 @@ gulp.task(task, [ 'copy-vendor-sass' ], function () {
     ))
     // 2. convert SCSS to CSS
     .pipe(
-      sass({ outputStyle: 'expanded' })
+      sass({
+          outputStyle: 'expanded',
+          importer: globImporter()
+        })
         .on('error', sass.logError)
     )
     // 3. run it through autoprefixer
