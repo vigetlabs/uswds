@@ -68,6 +68,10 @@
   @include sr-only();
 }
 
+.not-sr-only {
+  @include not-sr-only();
+}
+
 // Aria hidden helper
 @mixin accessibly-hidden() {
   &[aria-hidden=true] {
