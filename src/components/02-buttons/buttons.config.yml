@@ -19,6 +19,7 @@ variants:
       category: secondary-inverse
       label: Secondary inverse buttons
       classes: 'usa-button-secondary-inverse'
+    notes: 'This will be deprecated in 2.0'
 
   - name: aqua
     context:
@@ -43,3 +44,27 @@ variants:
       category: 'big'
       label: Big button
       classes: 'usa-button-big'
+
+  - name: unstyled-primary
+    context:
+      category: 'unstyled-primary'
+      label: Unstyled primary button
+      classes: 'usa-button usa-button-unstyled'
+
+  - name: unstyled-aqua
+    context:
+      category: 'unstyled-aqua'
+      label: Unstyled aqua button
+      classes: 'usa-button-primary-alt usa-button-unstyled'
+
+  - name: unstyled-gray
+    context:
+      category: 'unstyled-gray'
+      label: Unstyled gray button
+      classes: 'usa-button-gray usa-button-unstyled'
+
+  - name: unstyled-red
+    context:
+      category: 'unstyled-red'
+      label: Unstyled red button
+      classes: 'usa-button-red usa-button-unstyled'
