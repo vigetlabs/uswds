@@ -70,7 +70,13 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+.usa-heading-1,
+.usa-heading-2,
+.usa-heading-3,
+.usa-heading-4,
+.usa-heading-5,
+.usa-heading-6 {
   clear: both;
   font-family: $font-serif;
   line-height: $heading-line-height;
@@ -78,31 +84,34 @@ h5 {
   margin-top: 1.5em;
 }
 
-h6 {
-  font-family: $font-sans;
-}
-
-h1 {
+h1,
+.usa-heading-1 {
   @include h1();
 }
 
-h2 {
+h2,
+.usa-heading-2 {
   @include h2();
 }
 
-h3 {
+h3,
+.usa-heading-3 {
   @include h3();
 }
 
-h4 {
+h4,
+.usa-heading-4 {
   @include h4();
 }
 
-h5 {
+h5,
+.usa-heading-5 {
   @include h5();
 }
 
-h6 {
+h6,
+.usa-heading-6 {
+  font-family: $font-sans;
   @include h6();
 }
 
