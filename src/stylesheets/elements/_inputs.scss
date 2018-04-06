@@ -193,6 +193,14 @@ legend {
   margin-bottom: 0.65em;
 }
 
+[type=checkbox] + label {
+  margin-left: 1px;
+}
+
+[type=radio] + label {
+  margin-left: $checkbox-border-radius * 2;
+}
+
 [type=checkbox] + label::before,
 [type=radio] + label::before {
   background: $color-white;
