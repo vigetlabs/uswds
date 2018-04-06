@@ -31,6 +31,10 @@ a {
   }
 }
 
+.usa-color-text-visited {
+  color: $color-visited;
+}
+
 @mixin external-link($external-link, $external-link-hover) {
   &::after {
     background: url('#{$image-path}/#{$external-link}.png') no-repeat 0 0;
