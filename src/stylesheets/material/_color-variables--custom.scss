@@ -1,0 +1,91 @@
+$uswds-blue: (
+  "base":       #0071bc,
+  "darker":     #205493,
+  "darkest":    #112e51
+);
+
+$uswds-aqua: (
+  "base":       #02bfe7,
+  "dark":       #00a6d2,
+  "darkest":    #046b99,
+  "light":      #9bdaf1,
+  "lightest":   #e1f3f8
+);
+
+$uswds-red: (
+  "base":       #e31c3d,
+  "dark":       #cd2026,
+  "darkest":    #981b1e,
+  "light":      #e59393,
+  "lightest":   #f9dede
+);
+
+$uswds-white: (
+  "base":       #ffffff
+);
+
+$uswds-black: (
+  "base":       #000000,
+  "light":      #212121,
+  "dark":       #323a45
+);
+
+$uswds-gray: (
+  "base":       #5b616b,
+  "medium":     #757575,
+  "light":      #aeb0b5,
+  "lighter":    #d6d7d9,
+  "lightest":   #f1f1f1,
+  "warm-dark":  #494440,
+  "warm-light": #e4e2e0,
+  "cool-light": #dce4ef
+);
+
+$uswds-gold: (
+  "base":       #fdb81e,
+  "light":      #f9c642,
+  "lighter":    #fad980,
+  "lightest":   #fff1d2
+);
+
+$uswds-green: (
+  "base":       #2e8540,
+  "light":      #4aa564,
+  "lighter":    #94bfa2,
+  "lightest":   #e7f4e4
+);
+
+$uswds-cool-blue: (
+  "base":       #205493,
+  "light":      #4773aa,
+  "lighter":    #8ba6ca,
+  "lightest":   #dce4ef
+);
+
+$uswds-purple: (
+  "base":       #4c2c92
+);
+
+$uswds-colors: (
+  "blue": $uswds-blue,
+  "aqua": $uswds-aqua,
+  "red": $uswds-red,
+  "white": $uswds-white,
+  "black": $uswds-black,
+  "gray": $uswds-gray,
+  "gold": $uswds-gold,
+  "green": $uswds-green,
+  "cool-blue": $uswds-cool-blue,
+  "purple": $uswds-purple,
+);
+
+@function uswds-color($color, $type) {
+  @if map-has-key($uswds-colors, $color) {
+    $curr_color: map-get($uswds-colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{$color}` - `#{$type}` in $uswds-colors.";
+  @return null;
+}
