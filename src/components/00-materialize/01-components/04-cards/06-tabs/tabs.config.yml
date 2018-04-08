@@ -1,0 +1,4 @@
+label: Tabs in Cards
+handle: cards--tabs
+notes: <p><a href="http://materializecss.com/cards.html">Materialize docs</a></p><p>You can add tabs to your cards by adding a dividing `cards-tabs` div inbetween your header content and your tab content.</p>
+status: wip

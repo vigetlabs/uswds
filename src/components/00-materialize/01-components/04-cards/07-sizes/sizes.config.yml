@@ -1,0 +1,4 @@
+label: Sizes
+handle: cards--sizes
+notes: <a href="http://materializecss.com/cards.html">Materialize docs</a><p>If you want to have uniformly sized cards, you can use our premade size classes. Just add the size class in addition to the card class.</p>
+status: wip
