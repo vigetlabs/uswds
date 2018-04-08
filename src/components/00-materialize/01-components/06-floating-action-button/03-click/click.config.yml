@@ -1,0 +1,4 @@
+label: Click-Only FAB
+handle: fab--click-only
+notes: <a href="http://materializecss.com/floating-action-button.html">Materialize docs</a>
+status: wip

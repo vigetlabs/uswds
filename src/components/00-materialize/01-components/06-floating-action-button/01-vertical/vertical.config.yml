@@ -1,0 +1,4 @@
+label: Vertical FAB
+handle: fab--vertical
+notes: <a href="http://materializecss.com/floating-action-button.html">Materialize docs</a>
+status: wip
