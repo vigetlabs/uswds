@@ -1,0 +1,12 @@
+.material {
+  .input-field {
+    input[type=text]:not(.browser-default) {
+      height: 4.5rem;
+    }
+
+    label {
+      font-size: 1.5rem;
+      margin-top: 0;
+    }
+  }
+}
