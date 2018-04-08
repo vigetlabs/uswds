@@ -1,0 +1,22 @@
+// Color Classes
+
+@each $color_name, $color in $uswds-colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .uswds-#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .uswds-#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else if $color_name != "shades" {
+      .uswds-#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .uswds-#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
