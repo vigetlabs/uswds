@@ -1,4 +1,6 @@
 // custom overrides
+// NOTE! some overrides *have* to come after the Material imports
+// Find them at the end of this file
 @import "color-variables--custom";
 @import "color-classes--custom";
 // selections from
@@ -46,3 +48,7 @@
 @import "node_modules/materialize-css/sass/components/datepicker";
 @import "node_modules/materialize-css/sass/components/timepicker";
 
+
+
+// overrides that must come after the Material imports
+@import "badges--custom";
