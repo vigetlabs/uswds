@@ -1,0 +1,4 @@
+label: Indeterminate
+handle: preloader--lineear-indeterminate
+status: ready
+notes: <a href="http://materializecss.com/preloader.html">Materialize docs</a>
