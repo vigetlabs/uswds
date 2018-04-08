@@ -1,0 +1,56 @@
+<h2>Contacts</h2>
+<div class="chip">
+  <img src="//unsplash.it/900/900" alt="Contact Person">
+  Jane Doe
+</div>
+
+<h2>Tags</h2>
+<div class="chip">
+  Tag
+  <i class="close material-icons">close</i>
+</div>
+
+<div id="basic" class="material section scrollspy">
+  <h3 class="header">Javascript Plugin</h3>
+  <p class="caption">To add tags, just enter your tag text and press enter. You can delete them by clicking on the close icon or by using your delete button.</p>
+  <div class="chips input-field"><input class="input" id="d931079d-3ab2-5eac-2402-42648ad6ce60"></div>
+  <br>
+  <p class="caption">Set initial tags.</p>
+  <div class="chips chips-initial input-field"><div class="chip" tabindex="0">Apple<i class="material-icons close">close</i></div><div class="chip" tabindex="0">Microsoft<i class="material-icons close">close</i></div><div class="chip" tabindex="0">Google<i class="material-icons close">close</i></div><input class="input" id="bc9110b1-2375-a740-4a09-f58cb7f297ac"></div>
+  <br>
+  <p class="caption">Use placeholders and override hint texts.</p>
+  <div class="chips chips-placeholder input-field"><input class="input" id="11a98e64-f9bf-2406-9971-d761d1591b42" placeholder="Enter a tag"></div>
+  <br>
+  <p class="caption">Use autocomplete with chips.</p>
+  <div class="chips chips-autocomplete input-field"><input class="input" id="96f0a706-aa3b-ef91-7471-cf6575e10716" data-target="autocomplete-options-581505e3-cc3c-2996-2835-7973a37b6f4a"><ul id="autocomplete-options-581505e3-cc3c-2996-2835-7973a37b6f4a" class="autocomplete-content dropdown-content" tabindex="0"></ul></div>
+</div>
+
+<script>
+  var elem = document.querySelector('.chips');
+  var instance = M.Chips.init(elem, options);
+  $('.chips').chips();
+  $('.chips-initial').chips({
+    data: [{
+      tag: 'Apple',
+    }, {
+      tag: 'Microsoft',
+    }, {
+      tag: 'Google',
+    }],
+  });
+  $('.chips-placeholder').chips({
+    placeholder: 'Enter a tag',
+    secondaryPlaceholder: '+Tag',
+  });
+  $('.chips-autocomplete').chips({
+    autocompleteOptions: {
+      data: {
+        'Apple': null,
+        'Microsoft': null,
+        'Google': null
+      },
+      limit: Infinity,
+      minLength: 1
+    }
+  });
+</script>
