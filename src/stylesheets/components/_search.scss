@@ -1,6 +1,6 @@
-$usa-btn-small-width:   4.5rem;
-$usa-btn-medium-width:  8.5rem;
-$usa-btn-big-width:     11.6rem;
+$usa-search-button-small-width:   4.5rem;
+$usa-search-button-medium-width:  8.5rem;
+$usa-search-button-big-width:     11.6rem;
 
 @mixin search-icon {
   background-image: url('#{$image-path}/search.png');
@@ -22,18 +22,18 @@ $usa-btn-big-width:     11.6rem;
     height: 3.3rem;
     margin: 0;
     padding: 0;
-    width: $usa-btn-small-width;
+    width: $usa-search-button-small-width;
 
     @include media($small-screen) {
       background-image: none;
-      width: $usa-btn-medium-width;
+      width: $usa-search-button-medium-width;
     }
   }
 
   &.usa-search-big {
     @include media($small-screen) {
       $height: 4.4rem;
-      $width: $usa-btn-big-width;
+      $width: $usa-search-button-big-width;
 
       [type=search],
       .usa-search-input {
@@ -53,7 +53,7 @@ $usa-btn-big-width:     11.6rem;
 
   &.usa-search-small {
     @include media($small-screen) {
-      $width: $usa-btn-small-width;
+      $width: $usa-search-button-small-width;
 
       [type=search],
       .usa-search-input {
@@ -76,36 +76,36 @@ $usa-btn-big-width:     11.6rem;
       }
     }
   }
-}
 
-// Extra specificity to override rules set in reset.css.
-input[type=search] { /* stylelint-disable-line selector-no-qualifying-type */
-  box-sizing: border-box;
-  appearance: none;
-}
-
-[type=search],
-.usa-search-input {
-  @include padding(0 null);
-  border-bottom-right-radius: 0;
-  border-right: none;
-  border-top-right-radius: 0;
-  box-sizing: border-box;
-  float: left;
-  font-size: $small-font-size;
-  height: 3.3rem;
-  margin: 0;
-  width: calc(100% - #{$usa-btn-small-width});
-
-  @include media($small-screen) {
-    width: calc(100% - #{$usa-btn-medium-width});
+  // Extra specificity to override rules set in reset.css.
+  input[type=search] { /* stylelint-disable-line selector-no-qualifying-type */
+    box-sizing: border-box;
+    appearance: none;
   }
-}
 
-.usa-search-submit-text {
-  @include sr-only;
+  [type=search],
+  .usa-search-input {
+    @include padding(0 null);
+    border-bottom-right-radius: 0;
+    border-right: none;
+    border-top-right-radius: 0;
+    box-sizing: border-box;
+    float: left;
+    font-size: $small-font-size;
+    height: 3.3rem;
+    margin: 0;
+    width: calc(100% - #{$usa-search-button-small-width});
 
-  @include media($small-screen) {
-    @include not-sr-only();
+    @include media($small-screen) {
+      width: calc(100% - #{$usa-search-button-medium-width});
+    }
+  }
+
+  .usa-search-submit-text {
+    @include sr-only;
+
+    @include media($small-screen) {
+      @include not-sr-only();
+    }
   }
 }
